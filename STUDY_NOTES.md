@@ -68,6 +68,26 @@ UI 给的是二倍图，所以能得到如下关系：
       width: 100%
 ```
 
+### 样式穿透
+
+为了不影响其他组件的样式，一般在组件的 style 标签中都会加 scope 属性，代表局部样式，只对当前组件起作用。但要修改当前组件的子组件时，需要使用 `>>>` 进行样式穿透。
+
+```html
+<div class="wrapper">
+    <swiper :options="swiperOption">
+      <swiper-slide v-for="item of swiperList" :key="item.id">
+        <img class="swiper-img" :src="item.imgUrl"/>
+      </swiper-slide>
+      <div class="swiper-pagination"  slot="pagination"></div>
+    </swiper>
+  </div>
+```
+
+```css
+.wrapper >>> .swiper-pagination-bullet-active
+    background: #fff
+```
+
 
 
 ## Stylus
