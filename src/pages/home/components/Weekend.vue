@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item=img-swapper">
           <img class="item-img" :src="item.imgUrl" alt="">
         </div>
@@ -18,6 +18,9 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props: {
+    list: Array
+  },
   data () {
     return {
       recommendList: [{
@@ -44,14 +47,13 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/mixins.styl'
   .recommend-title
-    margin-top: .2rem
     line-height: .8rem
     background: #eee
     text-indent: .2rem
   .item-img-wrapper
     overflow: hidden
     height: 0
-    padding-bottom: 33.9%
+    padding-bottom: 37.09%
     .item-img
       width: 100%
   .item-info

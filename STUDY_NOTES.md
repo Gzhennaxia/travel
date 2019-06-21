@@ -127,3 +127,19 @@ resolve: {
 ## 三方组件
 ### vue-awesome-swiper
 > [GitHub 地址](https://github.com/surmon-china/vue-awesome-swiper)
+
+## 请求转发
+webpack-dev-server
+
+通过在 `config/index.js` 的 `proxyTable` 中添加如下配置
+
+```js
+proxyTable: {
+  '/api': {
+    target: 'http://localhost:8080',
+    pathRewrite: {
+      '^/api': '/static/mock'
+    }
+  }
+}
+```
