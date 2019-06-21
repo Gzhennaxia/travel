@@ -127,3 +127,5 @@ resolve: {
 ## 三方组件
 ### vue-awesome-swiper
 > [GitHub 地址](https://github.com/surmon-china/vue-awesome-swiper)
+
+Test
