@@ -128,4 +128,5 @@ resolve: {
 ### vue-awesome-swiper
 > [GitHub 地址](https://github.com/surmon-china/vue-awesome-swiper)
 
-Git
+Gi
+
