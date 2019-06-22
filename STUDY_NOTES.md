@@ -146,3 +146,22 @@ proxyTable: {
   }
 }
 ```
+
+Vue 中当元素的 ref 属性是通过 v-for 循环的方式指定的时候，通过 this.$refs[refName] 取到的值是一个数组
+```vue
+<div
+  class="area"
+  v-for="(item, key) of cities"
+  :key="key"
+  :ref="key"
+>
+  <div class="title border-topbottom">{{key}}</div>
+  <div class="item-list">
+    <div
+      class="item border-bottom"
+      v-for="innerItem of item"
+      :key="innerItem.id"
+    >{{innerItem.name}}</div>
+  </div>
+</div>
+```
