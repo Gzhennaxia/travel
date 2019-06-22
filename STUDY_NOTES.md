@@ -127,6 +127,9 @@ resolve: {
 ## 三方组件
 ### vue-awesome-swiper
 > [GitHub 地址](https://github.com/surmon-china/vue-awesome-swiper)
+### better-scroll
+> [GitHub 地址](https://github.com/ustbhuangyi/better-scroll)
+better-scroll 是对 [iscroll](https://github.com/cubiq/iscroll) 对封装
 
 ## 请求转发
 webpack-dev-server
