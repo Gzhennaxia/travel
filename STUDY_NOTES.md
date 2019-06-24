@@ -88,6 +88,10 @@ UI 给的是二倍图，所以能得到如下关系：
     background: #fff
 ```
 
+### z-index
+
+[z-index - CSS（层叠样式表） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/z-index)
+
 
 
 ## Stylus
