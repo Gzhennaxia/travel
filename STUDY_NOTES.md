@@ -169,3 +169,35 @@ Vue 中当元素的 ref 属性是通过 v-for 循环的方式指定的时候，�
   </div>
 </div>
 ```
+
+## HTML5
+
+### localStorage
+
+Html5 提供了 localStorage 接口用于实现类似 Cookie 的功能。
+
+但当用户关闭了本地存储的功能或者开启了隐身模式时浏览器会报异常，所以一般用到 localStorage 时会将其放到 try catch 里
+
+## Vuex
+
+### mapState / mapMutations / mapActions
+
+```js
+import { mapState, mapMutations } from 'vuex'
+
+computed: {
+  ...mapState['city']
+},
+methods: {
+  handleCityClick (city) {
+    // this.$store.commit('changeCity', city)
+    this.changeCity(city)
+    this.$router.push('/')
+  },
+    ...mapMutations['changeCity']
+},
+```
+
+### getter
+
+Vuex 中的 Getter 类似于计算属性的功能，减少冗余
