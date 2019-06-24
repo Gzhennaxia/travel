@@ -55,7 +55,7 @@ export default {
     this.scroll = new Bscroll(this.$refs.list)
   },
   computed: {
-    ...mapState['city']
+    ...mapState(['city'])
   },
   methods: {
     handleCityClick (city) {
@@ -63,7 +63,7 @@ export default {
       this.changeCity(city)
       this.$router.push('/')
     },
-    ...mapMutations['changeCity']
+    ...mapMutations(['changeCity'])
   },
   watch: {
     letter () {

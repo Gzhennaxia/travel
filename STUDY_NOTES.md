@@ -1,5 +1,14 @@
 # study notes
+## Vue
+
+### Keep Alive
+
+Keep Alive 是 Vue 中自带的标签，用来缓存页面，当使用了 Keep Alive 标签后，页面就多了一个生命周期函数 activated，每次重新回到页面时都会出发该钩子函数。结合临时缓冲变量可以实现更新缓存的作用。
+
+
+
 ## 移动端开发注意事项
+
 ### 样式重置
 ```html
 <!--  移动端需要设置 minimum-scale=1.0,maximum-scale=1.0,er-scalable=no  -->
@@ -194,7 +203,7 @@ methods: {
     this.changeCity(city)
     this.$router.push('/')
   },
-    ...mapMutations['changeCity']
+    ...mapMutations(['changeCity'])
 },
 ```
 
