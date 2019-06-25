@@ -16,7 +16,7 @@
 import CommonGallary from 'common/gallary/Gallary'
 
 export default {
-  name: 'Banner',
+  name: 'DetailBanner',
   components: {
     CommonGallary
   },
@@ -47,7 +47,7 @@ export default {
     height: 0
     padding-bottom: 55%
     .banner-img
-      widows: 100%
+      width: 100%
   .banner-info
     color: #fff
     display: flex
@@ -59,7 +59,7 @@ export default {
     background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))
     .banner-title
       flex: 1
-      font-style: .32rem
+      font-size: .32rem
       padding: 0 .2rem
     .banner-number
       height: .32rem

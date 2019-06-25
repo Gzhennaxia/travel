@@ -197,6 +197,20 @@ Html5 提供了 localStorage 接口用于实现类似 Cookie 的功能。
 
 但当用户关闭了本地存储的功能或者开启了隐身模式时浏览器会报异常，所以一般用到 localStorage 时会将其放到 try catch 里
 
+## JavaScript
+
+### Element.scrollTop
+
+> [Element.scrollTop - Web API 接口参考| MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollTop)
+
+**Element.scrollTop** 属性可以获取或设置一个元素的内容垂直滚动的像素数。
+
+一个元素的 `scrollTop` 值是这个元素的顶部到视口可见内容（的顶部）的距离的度量。
+
+### Document.documentElement
+
+**Document.documentElement** 是一个会返回文档对象（document）的根元素的只读属性（如HTML文档的 `<html>` 元素）。
+
 ## Vuex
 
 ### mapState / mapMutations / mapActions
