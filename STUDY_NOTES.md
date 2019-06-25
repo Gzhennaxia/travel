@@ -5,9 +5,27 @@
 
 Keep Alive 是 Vue 中自带的标签，用来缓存页面，当使用了 Keep Alive 标签后，页面就多了一个生命周期函数 activated，每次重新回到页面时都会触发该钩子函数。结合临时缓冲变量可以实现更新缓存的作用。
 
+
+
+当对整个应用进行页面缓存时，可以指定某些页面不缓存，使用 `<keep-alive>` 标签的 exclude 属性指定排除的组件。
+
+```html
+<keep-alive exclude="Detail">
+  <router-view/>
+</keep-alive>
+```
+
 ### 递归组件
 
 组件中 name 属性一般在递归组件里会用到，在组件中调用自身时标签名就是 name 属性的值。
+
+### 组件的 name 属性
+
+组件中 name 属性的作用：
+
+1. 递归组件中使用 name 属性值作为递归标签
+2. vue 调试工具中显示的组件名对应于 name 属性
+3. keep alive 中剔除组件时使用 name 属性指定要剔除的组件
 
 ## 移动端开发注意事项
 
@@ -244,3 +262,18 @@ methods: {
 ### getter
 
 Vuex 中的 Getter 类似于计算属性的功能，减少冗余
+
+## Vue-Router
+
+### 滚动行为
+
+> [滚动行为]([https://router.vuejs.org/zh/guide/advanced/scroll-behavior.html#%E5%BC%82%E6%AD%A5%E6%BB%9A%E5%8A%A8](https://router.vuejs.org/zh/guide/advanced/scroll-behavior.html#异步滚动))
+
+当页面切换后上一个页面的滚动会影响当前页面的滚动。解决这个问题只需要在创建 Router 时加上如下配置即可，意思是每次跳转到新页面时让 x / y 轴都从 0 开始。
+
+```js
+scrollBehavior (to, from, savedPosition) {
+  return { x: 0, y: 0 }
+}
+```
+
