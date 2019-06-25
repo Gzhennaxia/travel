@@ -3,7 +3,7 @@
 
 ### Keep Alive
 
-Keep Alive 是 Vue 中自带的标签，用来缓存页面，当使用了 Keep Alive 标签后，页面就多了一个生命周期函数 activated，每次重新回到页面时都会出发该钩子函数。结合临时缓冲变量可以实现更新缓存的作用。
+Keep Alive 是 Vue 中自带的标签，用来缓存页面，当使用了 Keep Alive 标签后，页面就多了一个生命周期函数 activated，每次重新回到页面时都会触发该钩子函数。结合临时缓冲变量可以实现更新缓存的作用。
 
 
 
@@ -101,6 +101,12 @@ UI 给的是二倍图，所以能得到如下关系：
 
 [z-index - CSS（层叠样式表） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/z-index)
 
+### 背景渐变色
+
+```css
+background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))
+```
+
 
 
 ## Stylus
@@ -140,6 +146,10 @@ resolve: {
 ## 三方组件
 ### vue-awesome-swiper
 > [GitHub 地址](https://github.com/surmon-china/vue-awesome-swiper)
+>
+> [Swiper 中文网](https://www.swiper.com.cn/)
+当 swiper 元素的父级元素的 DOM 发生变化时，swiper 的宽度计算会发生问题，需要开启 observeParents 和 observe 来促使 swiper 重新计算宽度。
+
 ### better-scroll
 > [GitHub 地址](https://github.com/ustbhuangyi/better-scroll)
 better-scroll 是对 [iscroll](https://github.com/cubiq/iscroll) 对封装

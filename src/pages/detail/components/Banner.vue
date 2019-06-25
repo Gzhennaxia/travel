@@ -1,0 +1,74 @@
+<template>
+  <div class="banner" @click="handleBannerClick">
+    <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1906/eb/eb39cce9ccab5cada3.img.jpg_600x330_d105aefd.jpg">
+    <div class="banner-info">
+      <div class="banner-title">锦绣中华民俗村(AAAAA景区)</div>
+      <div class="banner-number">
+        <span class="iconfont banner-icon">&#xe626;</span>
+        74
+      </div>
+    </div>
+    <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+  </div>
+</template>
+
+<script>
+import CommonGallary from 'common/gallary/Gallary'
+
+export default {
+  name: 'Banner',
+  components: {
+    CommonGallary
+  },
+  data () {
+    return {
+      imgs: [
+        'http://img1.qunarzz.com/sight/p0/1905/e6/e683c8cf5e97ce03a3.img.jpg_r_800x800_8367fc5c.jpg',
+        'http://img1.qunarzz.com/sight/p0/1905/71/716ed1ae84b2141ca3.img.jpg_r_800x800_b6067d7f.jpg'
+      ],
+      showGallary: false
+    }
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallary = true
+    },
+    handleGallaryClose () {
+      this.showGallary = false
+    }
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+  .banner
+    position: relative
+    overflow: hidden
+    height: 0
+    padding-bottom: 55%
+    .banner-img
+      widows: 100%
+  .banner-info
+    color: #fff
+    display: flex
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    line-height: .6rem
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))
+    .banner-title
+      flex: 1
+      font-style: .32rem
+      padding: 0 .2rem
+    .banner-number
+      height: .32rem
+      line-height: .32rem
+      margin-top: .14rem
+      padding: 0 .4rem
+      border-radius: .2rem
+      background: rgba(0, 0, 0, 0.8)
+      font-size: .24rem
+      .banner-icon
+        font-size: .24rem
+</style>
