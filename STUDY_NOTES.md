@@ -5,7 +5,9 @@
 
 Keep Alive 是 Vue 中自带的标签，用来缓存页面，当使用了 Keep Alive 标签后，页面就多了一个生命周期函数 activated，每次重新回到页面时都会触发该钩子函数。结合临时缓冲变量可以实现更新缓存的作用。
 
+### 递归组件
 
+组件中 name 属性一般在递归组件里会用到，在组件中调用自身时标签名就是 name 属性的值。
 
 ## 移动端开发注意事项
 
@@ -208,6 +210,8 @@ Html5 提供了 localStorage 接口用于实现类似 Cookie 的功能。
 一个元素的 `scrollTop` 值是这个元素的顶部到视口可见内容（的顶部）的距离的度量。
 
 ### Document.documentElement
+
+> [document.documentElement - Web API 接口参考| MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/documentElement)
 
 **Document.documentElement** 是一个会返回文档对象（document）的根元素的只读属性（如HTML文档的 `<html>` 元素）。
 
