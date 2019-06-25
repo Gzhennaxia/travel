@@ -211,6 +211,12 @@ Html5 提供了 localStorage 接口用于实现类似 Cookie 的功能。
 
 **Document.documentElement** 是一个会返回文档对象（document）的根元素的只读属性（如HTML文档的 `<html>` 元素）。
 
+### EventTarget.addEventListener()
+
+> [EventTarget.addEventListener() - Web API 接口参考| MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
+
+EventTarget.addEventListener() 方法将指定的监听器注册到 EventTarget 上，当该对象触发指定的事件时，指定的回调函数就会被执行。 事件目标可以是一个文档上的元素 Element,Document和Window或者任何其他支持事件的对象 (比如 XMLHttpRequest)。
+
 ## Vuex
 
 ### mapState / mapMutations / mapActions
