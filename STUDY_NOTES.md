@@ -239,6 +239,12 @@ Html5 提供了 localStorage 接口用于实现类似 Cookie 的功能。
 
 EventTarget.addEventListener() 方法将指定的监听器注册到 EventTarget 上，当该对象触发指定的事件时，指定的回调函数就会被执行。 事件目标可以是一个文档上的元素 Element,Document和Window或者任何其他支持事件的对象 (比如 XMLHttpRequest)。
 
+### Polyfill
+
+[@babel/polyfill · Babel 中文网](https://www.babeljs.cn/docs/babel-polyfill)
+
+
+
 ## Vuex
 
 ### mapState / mapMutations / mapActions
@@ -276,4 +282,24 @@ scrollBehavior (to, from, savedPosition) {
   return { x: 0, y: 0 }
 }
 ```
+
+## WebPack
+
+### 使用IP访问前端项目
+
+webpack server 默认不支持使用 IP 进行访问，通过修改 `package.json` 文件中的 scripts.dev，加上 `--host 0.0.0.0` 即可。实际上我们每次执行的 `nom run dev` 执行的就是 scripts.dev 的指令。
+
+```json
+{
+  "scripts": {
+    "dev": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js"
+  }
+}
+```
+
+### Build
+
+打包命令：`npm run build`
+
+打包后会生成 dist 目录，如果要打包后放在后端项目的 project 目录下，则需要修改 `config/index.js` 文件的 build 配置中的 `assetsPublicPath: '/project'`，然后再重新打包即可。
 
